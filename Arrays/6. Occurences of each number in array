@@ -1,0 +1,73 @@
+1) By Simple Printing
+
+import java.util.*;
+class MyFile{
+    static void occurences(int arr[])
+    {
+        ArrayList<Integer>list=new ArrayList<>();
+        for(int j=0;j<arr.length;j++)
+        {
+            int count=1;
+            for(int i=j+1;i<arr.length;i++)
+            {
+                if(arr[j]==arr[i])
+                {
+                    count=count+1;
+                }
+            }
+            if(list.contains(arr[j]))
+            {
+                continue;
+            }
+            else 
+            {
+                list.add(arr[j]);
+                System.out.println("Element is: "+arr[j]+" Count is: "+count);
+            }
+        }        
+    }
+    public static void main(String args[])
+    {
+        int arr[]={2,3,4,5,12,6,7,3,1,1,2,6,4,4,78,12,34,56};
+        occurences(arr);
+
+    }
+}
+
+2) By HashMap
+
+import java.util.*;
+class MyFile{
+    static void occurences(int arr[])
+    {
+        ArrayList<Integer>list=new ArrayList<>();
+        Map<Integer,Integer> map=new HashMap<>();
+        for(int j=0;j<arr.length;j++)
+        {
+            int count=1;
+            for(int i=j+1;i<arr.length;i++)
+            {
+                if(arr[j]==arr[i])
+                {
+                    count=count+1;
+                }
+            }
+            if(list.contains(arr[j]))
+            {
+                continue;
+            }
+            else 
+            {
+                map.put(arr[j],count);
+                list.add(arr[j]);
+            }
+        }
+        System.out.println(map);
+        
+    }
+    public static void main(String args[])
+    {
+        int arr[]={2,3,4,5,12,6,7,3,1,1,2,6,4,4,78,12,34,56};
+        occurences(arr);
+    }
+}
