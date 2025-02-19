@@ -1,23 +1,14 @@
-import java.util.*;
-class MyFile{
-    static int occurences(int arr[],int target)
+static int occurences(int arr[],int target)
+{
+    int count=0;
+    ArrayList<Integer>list=new ArrayList<>();
+    for(int i=0;i<arr.length;i++)
     {
-        int count=0;
-        ArrayList<Integer>list=new ArrayList<>();
-        for(int i=0;i<arr.length;i++)
+        if(arr[i]==target)
         {
-            if(arr[i]==target)
-            {
-                count=count+1;
-            }
+            count=count+1;
         }
-        return count;
     }
-    public static void main(String args[])
-    {
-        int arr[]={2,3,4,5,6,7,4,4,3,2,6,4,4,78,12,34,56};
-        int target=4;
-        System.out.println(occurences(arr,target));
-
-    }
+    return count;
 }
+
