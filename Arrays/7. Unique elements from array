@@ -1,0 +1,32 @@
+1) Using List(contains method)
+
+import java.util.*;
+    static void unique(int arr[])
+    {
+        ArrayList<Integer>list=new ArrayList<>();
+        for(int i=0;i<arr.length;i++)
+        {
+            if(list.contains(arr[i]))
+            {
+                continue;
+            }
+            else
+            {
+                list.add(arr[i]);
+            }
+        }
+        System.out.println(list);
+    }
+
+  2) Using Hashset
+  
+  static void moreUnique(int arr[])
+    {
+        Set hash_set=new HashSet<>();
+
+        for(int i=0;i<arr.length;i++)
+        {
+            hash_set.add(arr[i]);
+        }
+        System.out.println(hash_set);
+    }
