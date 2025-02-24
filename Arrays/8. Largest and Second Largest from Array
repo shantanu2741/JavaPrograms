@@ -11,7 +11,7 @@
             }
             else if(max>arr[i] && secMax<arr[i])
             {
-                secMax=arr[i];
+                secMax=arr[i]; 
             }
         }
         System.out.println(max);
