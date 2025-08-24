@@ -3,17 +3,23 @@ public class LinearSearch {
     public static void main(String args[])
     {
        int arr[]={2,222,343,21,342,45,21,32,12,3};
-       linearSearch(arr,12); 
+       int ans= linearSearch(arr,12); 
+       System.out.println(ans);
     }
-    static void linearSearch(int arr[],int target)
+    static int linearSearch(int arr[],int target)
     {
+        if(arr.length==0)
+        {
+            return -1;
+        }
         for(int i=0;i<arr.length;i++)
         {
             if(arr[i]==target)
             {
-                System.out.println(i);
-                break;
+                System.out.println("Element found at:" +i);
+                return i;
             }
         }
+        return -1;
     }
 }
