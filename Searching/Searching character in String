@@ -1,0 +1,19 @@
+import java.util.*;
+public class FindChar {
+    public static void main(String args[])
+    {
+       String name="Shantanu";
+       String h=linearSearch(name.toLowerCase(),'z'); 
+       System.out.println(h);
+    }
+    static String linearSearch(String str,char c)
+    {
+        for(int i=0;i<str.length();i++)
+        {
+            if(str.charAt(i)==c)
+            {
+                return "found";
+            }
+        }
+        return  "not found";
+    }
