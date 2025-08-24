@@ -1,0 +1,23 @@
+import java.util.*;
+public class Practice {
+    public static void main(String args[])
+    {
+        int arr[]={22,3,445,677,2113,34,21,3,467,3};
+        reversedArray(arr);
+    }
+    static void reversedArray(int arr[])
+    {
+       int start=0;
+       int end=arr.length-1;
+
+       while(start<end)
+       {
+        int temp=arr[start];
+        arr[start]=arr[end];
+        arr[end]=temp;
+        start++;
+        end--;
+       }
+       System.out.println(Arrays.toString(arr));
+    }
+}
